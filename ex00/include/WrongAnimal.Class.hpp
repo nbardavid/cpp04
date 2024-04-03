@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.Class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbardavi <nbardavi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 13:58:06 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/02 14:07:20 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/03 10:17:34 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
     WrongAnimal& operator=(const WrongAnimal& other);
 	std::string getType() const;
 	void setType( std::string );
-	virtual void makeSound() const;
+	void makeSound() const;
 private:
 	std::string type;
 };

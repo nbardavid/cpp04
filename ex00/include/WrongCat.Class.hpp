@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.Class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbardavi <nbardavi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 13:58:02 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/02 14:01:14 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/03 10:15:19 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 #include "WrongAnimal.Class.hpp"
 
-class Cat: public WrongAnimal {
+class WrongCat: public WrongAnimal {
 public:
-    Cat();
-    Cat(const Cat& other);
-    ~Cat();
-    Cat& operator=(const Cat& other);
+    WrongCat();
+    WrongCat(const WrongCat& other);
+    ~WrongCat();
+    WrongCat& operator=(const WrongCat& other);
 	void makeSound() const;
 };
 

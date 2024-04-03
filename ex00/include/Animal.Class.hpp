@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.Class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbardavi <nbardavi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 13:58:19 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/02 13:58:20 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/03 13:31:27 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
     Animal();
 	Animal( std::string type );
     Animal(const Animal& other);
-    ~Animal();
+    virtual ~Animal();
     Animal& operator=(const Animal& other);
 	std::string getType() const;
 	void setType( std::string );
