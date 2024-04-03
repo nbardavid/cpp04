@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbardavi <nbardavi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 13:00:11 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/02 13:55:46 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/03 13:32:12 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../include/WrongCat.Class.hpp"
+#include "../include/WrongAnimal.Class.hpp"
 #include "../include/Animal.Class.hpp"
 #include "../include/Cat.Class.hpp"
 #include "../include/Dog.Class.hpp"
@@ -31,5 +33,22 @@ int	main (){
 	i->makeSound(); //cat
 	j->makeSound();
 	meta->makeSound();
+	std::cout << std::endl << BLUE << "===================" << std::endl << std::endl << RESET;
+	
+	WrongAnimal meta2;
+	WrongCat wrong_cat;
+
+	wrong_cat.makeSound();
+	meta2.makeSound();
+	std::cout << std::endl;
+	const WrongAnimal* k = new WrongCat();
+	k->makeSound();
+	std::cout << std::endl;
+
+	delete k;
+	delete i;
+	delete j;
+	delete meta;
+
 	return (0);
 }
