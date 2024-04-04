@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 13:00:11 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/03 13:34:57 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/04 10:12:15 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,38 +17,25 @@
 #include "../include/Dog.Class.hpp"
 #include "../include/colors.h"
 
-int	main (){
-	Cat cat;
-	Dog dog;
-
-	cat.makeSound();
-	dog.makeSound();
-
-	std::cout << std::endl << BLUE << "===================" << std::endl << std::endl << RESET;
-	Animal* meta = new Animal();
+int main()
+{
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //cat
-	j->makeSound();
-	meta->makeSound();
-	std::cout << std::endl << BLUE << "===================" << std::endl << std::endl << RESET;
-	
-	WrongAnimal meta2;
-	WrongCat wrong_cat;
-
-	wrong_cat.makeSound();
-	meta2.makeSound();
-	std::cout << std::endl;
-	const WrongAnimal* k = new WrongCat();
-	k->makeSound();
-	std::cout << std::endl;
-
-	delete k;
+	delete j;//should not create a leak
 	delete i;
-	delete j;
-	delete meta;
 
-	return (0);
+	Animal* k[10];
+	for (int i = 0; i < 5; i++){
+		k[i] = new Dog();
+	}
+	for (int i = 5; i < 10; i++){
+		k[i] = new Cat();
+	}
+	for (int i = 0; i < 10; i++){
+		delete k[i];
+	}
+
+	// Animal test;
+
+	return 0;
 }
