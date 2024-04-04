@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.Class.hpp                                    :+:      :+:    :+:   */
+/*   AMateria.Class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 13:38:21 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 09:51:03 by nbardavi         ###   ########.fr       */
+/*   Created: 2024/04/04 14:09:00 by nbardavi          #+#    #+#             */
+/*   Updated: 2024/04/04 14:09:49 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_CLASS_HPP
-#define BRAIN_CLASS_HPP
+#ifndef AMATERIA_CLASS_HPP
+#define AMATERIA_CLASS_HPP
 
-#include <string>
+#include "ICharacter.Class.hpp"
 
-class Brain{
+class AMateria {
 public:
-    Brain();
-    Brain(const Brain& other);
-    ~Brain();
-    Brain& operator=(const Brain& other);
-private:
-	std::string _ideas[100];
+    AMateria();
+	AMateria(std::string const & type);
+    AMateria(const AMateria& other);
+    ~AMateria();
+    AMateria& operator=(const AMateria& other);
+
+	virtual std::string const & getType() const = 0;
+	virtual AMateria* clone() const = 0;
+	virtual void use(ICharacter& target);
+protected:
+	std::string _type;
 };
 
 #endif

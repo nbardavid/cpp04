@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.Class.hpp                                    :+:      :+:    :+:   */
+/*   Cure.Class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/03 13:38:21 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 09:51:03 by nbardavi         ###   ########.fr       */
+/*   Created: 2024/04/04 11:50:25 by nbardavi          #+#    #+#             */
+/*   Updated: 2024/04/04 11:52:00 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_CLASS_HPP
-#define BRAIN_CLASS_HPP
+#ifndef CURE_CLASS_HPP
+#define CURE_CLASS_HPP
 
-#include <string>
+#include "ICharacter.Class.hpp"
+#include "AMateria.Class.hpp"
 
-class Brain{
+class Cure:public AMateria {
 public:
-    Brain();
-    Brain(const Brain& other);
-    ~Brain();
-    Brain& operator=(const Brain& other);
-private:
-	std::string _ideas[100];
+    Cure();
+    Cure(const Cure& other);
+    ~Cure();
+    Cure& operator=(const Cure& other);
+	void use(ICharacter& target);
 };
 
 #endif
