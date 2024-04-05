@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:50:29 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 14:03:31 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/05 10:58:57 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ public:
     ~Ice();
     Ice& operator=(const Ice& other);
 	void use(ICharacter& target);
-    virtual AMateria* clone() const;
+    AMateria* clone() const;
+	std::string const & getType() const;
 };
 
 #endif
