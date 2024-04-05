@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:42:53 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 14:05:52 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/05 11:07:14 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include "../include/colors.h"
 #include <iostream>
 
-Ice::Ice(){
+Ice::Ice():AMateria("ice"){
 	std::cout << GREEN << "Ice default constructor has been called" << RESET << std::endl;
 }
 
-Ice::Ice(const Ice& other){
+Ice::Ice(const Ice& other): AMateria(other.getType()){
 	std::cout << GREEN << "Ice copy constructor has been called" << RESET << std::endl;
 	//A faire
 }
@@ -39,7 +39,10 @@ void Ice::use(ICharacter& target){
 }
 
 AMateria* Ice::clone() const{
-	AMateria* i = new Ice;
-	Ice 
-	return ();
+	AMateria* i = new Ice();
+	return (i);
+}
+
+std::string const & Ice::getType() const{
+	return (this->_type);
 }
