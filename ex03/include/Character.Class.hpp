@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 12:26:36 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 12:32:33 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:01:26 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
     virtual void equip(AMateria* m);
     virtual void unequip(int idx);
     virtual void use(int idx, ICharacter& target);
+	std::string getName();
 private:
 	AMateria* _inventory[4];
 	std::string _name;

@@ -1,0 +1,34 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "obj/AMateria.Class.o",
+      "srcs/AMateria.Class.cpp"
+    ],
+    "directory": "/home/nbardavi/Desktop/c++/cpp04/ex03",
+    "file": "/home/nbardavi/Desktop/c++/cpp04/ex03/srcs/AMateria.Class.cpp",
+    "output": "/home/nbardavi/Desktop/c++/cpp04/ex03/obj/AMateria.Class.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "obj/Character.Class.o",
+      "srcs/Character.Class.cpp"
+    ],
+    "directory": "/home/nbardavi/Desktop/c++/cpp04/ex03",
+    "file": "/home/nbardavi/Desktop/c++/cpp04/ex03/srcs/Character.Class.cpp",
+    "output": "/home/nbardavi/Desktop/c++/cpp04/ex03/obj/Character.Class.o"
+  }
+]
