@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:49:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 11:50:17 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:41:37 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 #include "../include/colors.h"
 #include <iostream>
 
-Cure::Cure(){
+Cure::Cure(): AMateria("cure"){
 	std::cout << GREEN << "Cure default constructor has been called" << RESET << std::endl;
 }
 
-Cure::Cure(const Cure& other){
+Cure::Cure(const Cure& other): AMateria("cure"){
+	*this = other;
 	std::cout << GREEN << "Cure copy constructor has been called" << RESET << std::endl;
 }
 
@@ -28,7 +29,7 @@ Cure::~Cure(){
 
 Cure& Cure::operator=(const Cure& other){
 	if (this != &other){
-		//A faire
+		this->_type = other.getType();
 	}
     return *this;
 }

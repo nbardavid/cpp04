@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 10:56:46 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 10:58:33 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:01:35 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "../include/MateriaSource.Class.hpp"
 #include "../include/IMateriaSource.Class.hpp"
 
-main()
+int main()
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());

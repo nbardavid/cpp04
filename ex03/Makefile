@@ -1,7 +1,7 @@
 
 CXX=g++
 CXXFLAGS=-std=c++98 -Wall -Wextra -Werror
-SRCDIR=src
+SRCDIR=srcs
 OBJDIR=obj
 SRCS=$(wildcard $(SRCDIR)/*.cpp)
 OBJS=$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
@@ -15,25 +15,25 @@ RESET = \033[0m
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-        @printf "$(GREEN)Linking...$(RESET)\n"
-        @$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
-        @printf "$(GREEN)Compilation successful!$(RESET)\n"
+	@printf "$(GREEN)Linking...$(RESET)\n"
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
+	@printf "$(GREEN)Compilation successful!$(RESET)\n"
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
-        @mkdir -p $(OBJDIR)
-        @printf "$(BLUE)Compiling $<...$(RESET)\n"
-        @$(CXX) $(CXXFLAGS) -c $< -o $@
-        @printf "$(GREEN)Compiled $< successfully!$(RESET)\n"
+	@mkdir -p $(OBJDIR)
+	@printf "$(BLUE)Compiling $<...$(RESET)\n"
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+	@printf "$(GREEN)Compiled $< successfully!$(RESET)\n"
 
 clean:
-        @printf "$(RED)Cleaning up object files...$(RESET)\n"
-        @rm -frd obj
-        @printf "$(RED)Cleaned.$(RESET)\n"
+	@printf "$(RED)Cleaning up object files...$(RESET)\n"
+	@rm -frd obj
+	@printf "$(RED)Cleaned.$(RESET)\n"
 
 fclean: clean
-        @printf "$(RED)Removing executable $(TARGET)...$(RESET)\n"
-        @rm -f $(TARGET)
-        @printf "$(RED)Removed.$(RESET)\n"
+	@printf "$(RED)Removing executable $(TARGET)...$(RESET)\n"
+	@rm -f $(TARGET)
+	@printf "$(RED)Removed.$(RESET)\n"
 
 re: fclean all
 

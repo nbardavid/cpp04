@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 14:09:00 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 14:09:49 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:12:05 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ public:
     AMateria();
 	AMateria(std::string const & type);
     AMateria(const AMateria& other);
-    ~AMateria();
+    virtual ~AMateria();
     AMateria& operator=(const AMateria& other);
 
 	virtual std::string const & getType() const = 0;

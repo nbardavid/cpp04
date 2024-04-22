@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:42:53 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/05 11:07:14 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:41:49 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ Ice::Ice():AMateria("ice"){
 	std::cout << GREEN << "Ice default constructor has been called" << RESET << std::endl;
 }
 
-Ice::Ice(const Ice& other): AMateria(other.getType()){
+Ice::Ice(const Ice& other): AMateria("ice"){
+	*this = other;
 	std::cout << GREEN << "Ice copy constructor has been called" << RESET << std::endl;
-	//A faire
 }
 
 Ice::~Ice(){
@@ -29,7 +29,7 @@ Ice::~Ice(){
 
 Ice& Ice::operator=(const Ice& other){
 	if (this != &other){
-		//A faire
+		this->_type = other.getType();
 	}
     return *this;
 }
