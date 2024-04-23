@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:49:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/22 15:41:37 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/23 13:11:11 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,13 @@ Cure& Cure::operator=(const Cure& other){
 
 void Cure::use(ICharacter& target){
 	std::cout << BLUE << "* heals " << target.getName() << "'s wounds *" << RESET << std::endl;
+}
+
+AMateria* Cure::clone() const{
+	AMateria* i = new Cure();
+	return (i);
+}
+
+std::string const & Cure::getType() const{
+	return (this->_type);
 }

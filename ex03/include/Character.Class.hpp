@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 12:26:36 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/22 16:01:26 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/23 13:56:28 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include "AMateria.Class.hpp"
 #include "ICharacter.Class.hpp"
 
-class Character {
+class Character:public ICharacter
+{
 public:
     Character();
     Character(std::string name);
