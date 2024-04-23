@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:50:25 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 11:52:00 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/23 13:10:35 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ public:
     ~Cure();
     Cure& operator=(const Cure& other);
 	void use(ICharacter& target);
+    AMateria* clone() const;
+	std::string const & getType() const;
 };
 
 #endif

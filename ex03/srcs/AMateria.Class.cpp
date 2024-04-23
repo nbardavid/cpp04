@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:11:55 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/04/04 11:14:06 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:05:47 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,8 @@ AMateria& AMateria::operator=(const AMateria& other){
 		this->_type = other.getType();
 	}
     return *this;
+}
+
+void AMateria::use(ICharacter& target){
+	std::cout << BLUE << "Using Amateria" << this->getType() << "on" << target.getName() << RESET << std::endl;
 }
